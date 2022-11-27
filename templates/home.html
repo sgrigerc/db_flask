@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+<div class="container w-75 p-3 mx-auto" style="background-color: #c8e8ff;">
+    <div class="row">
+        <div class="col">
+            <div class="badge bg-secondary text-wrap mt-2" style="width: 35rem;">
+                <p>Текст</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="badge bg-info text-wrap mt-2" style="width: 10rem;">
+                <p>Дата создания</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="badge bg-info text-wrap mt-2" style="width: 10rem;">
+                <p>Рубрика</p>
+            </div>
+        </div>
+    </div>
+    <table>
+        {% for row in rows %}
+            <div class="row">
+                <div class="col">
+                    <div class="badge bg-secondary text-wrap mt-2 ml-2 " style="width: 35rem;">
+                        {{row[0]}}
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="badge bg-info text-wrap mt-2" style="width: 10rem;">
+                        {{row[1]}}
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="badge bg-info text-wrap mt-2 ml-1" style="width: 10rem;">
+                        {{row[2]}}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </table>
+</div
+{% endblock %}
