@@ -1,9 +1,6 @@
 from flask import Flask, render_template, url_for, request
 import psycopg2
-import db_center
-
-dbname="postgres"
-
+from db_center import hostname, dbname, username, port_id, pwd
 app = Flask(__name__)
 
 connect = psycopg2.connect(
